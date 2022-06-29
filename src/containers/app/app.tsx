@@ -1,9 +1,13 @@
-import Header from "../../components/header/header";
+import Header from "src/components/header/header";
 
 function App({ Component, pageProps }) {
+  const onKeywordsSubmit = (keywords: string) => {
+    console.log(keywords);
+  };
+
   return (
     <div>
-      <Header />
+      <Header onKeywordsSubmit={onKeywordsSubmit} />
       <main>
         <Component {...pageProps} />
       </main>

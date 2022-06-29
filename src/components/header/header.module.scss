@@ -1,9 +1,12 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-    .title{
-        margin: 0 20px;
-    }
+  .title {
+    margin: 0 20px;
+  }
 }

@@ -1,0 +1,47 @@
+$cardHeight: 100px;
+$cardWidth: 350px;
+
+.card {
+  height: $cardHeight;
+  width: $cardWidth;
+  display: flex;
+  overflow: hidden;
+
+  .image {
+    height: $cardHeight;
+    min-width: $cardHeight;
+    background-size: cover;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    .title {
+      color: black;
+      font-size: 16px;
+      padding: 10px 10px 0 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .type,
+    .artist {
+      font-size: 12px;
+      padding: 2px 10px 2px 10px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .type {
+      color: gray;
+      font-size: 10px;
+      padding: 0 10px 10px 10px;
+    }
+  }
+}
