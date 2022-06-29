@@ -5,6 +5,7 @@ async function searchMusic(keywords: string) {
     const searchResults = await get(
       `/api/music?keywords=${encodeURIComponent(keywords)}`
     );
+    console.debug({ searchResults });
     return searchResults;
   } catch (error) {
     console.error(error);

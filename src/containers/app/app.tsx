@@ -1,17 +1,14 @@
-import Header from "src/components/header/header";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "src/reducers/rootReducer";
+import StatefulApp from "./statefulApp";
 
 function App({ Component, pageProps }) {
-  const onKeywordsSubmit = (keywords: string) => {
-    console.log(keywords);
-  };
-
+  const store = createStore(rootReducer);
   return (
-    <div>
-      <Header onKeywordsSubmit={onKeywordsSubmit} />
-      <main>
-        <Component {...pageProps} />
-      </main>
-    </div>
+    <Provider store={store}>
+      <StatefulApp Component={Component} pageProps={pageProps} />
+    </Provider>
   );
 }
 

@@ -14,7 +14,7 @@ function Header(props) {
   };
 
   return (
-    <Paper className={style.header} shadow="xs" p="md">
+    <Paper className={style.header} shadow="xs" p="md" radius={0}>
       <Title className={style.title} order={4}>
         NextTunes
       </Title>
