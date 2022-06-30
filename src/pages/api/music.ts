@@ -6,10 +6,10 @@ export default async function handler(
   res: NextApiResponse
 ) {
   try {
-    const { keywords } = req.query;
+    const { keywords, page = 0 } = req.query;
 
     // fetch data from itunes api
-    const url = `https://itunes.apple.com/search?entity=musicArtist,song,album&term=${encodeURIComponent(
+    const url = `https://itunes.apple.com/search?limit=10&entity=musicArtist,song,album&offset=${page}&term=${encodeURIComponent(
       keywords
     )}`;
 

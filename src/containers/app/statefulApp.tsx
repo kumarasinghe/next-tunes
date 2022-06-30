@@ -6,6 +6,9 @@ function StatefulApp({ Component, pageProps }) {
   const dispatch = useDispatch();
 
   const keywordsSubmitHandler = async (keywords: string) => {
+    dispatch({ type: "SET_SEARCH_KEYWORDS", payload: keywords });
+
+    // make a new search
     const searchResults = await searchMusic(keywords);
     dispatch({ type: "SET_SEARCH_RESULTS", payload: searchResults });
   };
